@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <NoWarn>1701;1702;1591</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fur" Version="1.0.0.4" />
+    <PackageReference Include="Fur.Extras.Authentication.JwtBearer" Version="1.0.0" />
+  </ItemGroup>
+
+</Project>
