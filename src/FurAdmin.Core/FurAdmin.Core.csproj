@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Fur" Version="1.0.0.4" />
+    <PackageReference Include="Fur" Version="1.0.3" />
     <PackageReference Include="Fur.Extras.Authentication.JwtBearer" Version="1.0.0" />
   </ItemGroup>
 
