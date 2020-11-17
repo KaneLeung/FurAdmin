@@ -13,10 +13,8 @@ namespace FurAdmin.WebCore
         {
             // 注册 JWT 授权
             services.AddJwt<JwtHandler>();
-
             services.AddCorsAccessor();
-
-            services.AddControllersWithViews().AddInjectWithUnifyResult();
+            services.AddControllersWithViews().AddInjectWithUnifyResult<YourResultProvider>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -25,9 +23,8 @@ namespace FurAdmin.WebCore
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            // 添加规范化结果状态码，需要在这里注册
-            //app.UseUnifyResultStatusCodes();
+            // 添加自定义返回类型，需要在这里注册，要先注入【YourResultProvider】
+            app.UseUnifyResultStatusCodes();
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
